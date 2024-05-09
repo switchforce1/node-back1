@@ -1,0 +1,9 @@
+services:
+  node-server:
+    user: 1001:1001
+    build:
+      context: docker/node
+    volumes:
+      - .:/app
+    ports:
+      - 3050:3050
