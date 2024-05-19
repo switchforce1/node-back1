@@ -7,3 +7,25 @@ services:
       - .:/app
     ports:
       - 3050:3050
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo:latest
+    env_file:
+      - .env
+    restart: on-failure
+    ports:
+      - 27017:27017
+    volumes:
+      - docker_mongo_data:/data/db
+  mongo-express:
+    image: mongo-express
+    env_file:
+      - .env
+    ports:
+      - 8081:8081
+    depends_on:
+      - mongo
+volumes:
+  docker_mongo_data:
+

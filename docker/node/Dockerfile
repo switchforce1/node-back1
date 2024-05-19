@@ -1,7 +1,9 @@
 FROM node:22-alpine
 
-RUN apt-get update && apt-get install -y \
-curl
+USER root
+RUN apk update
+RUN apk upgrade
+RUN apk add curl
 
 WORKDIR /app
 
