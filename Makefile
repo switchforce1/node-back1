@@ -10,3 +10,6 @@ restart:
 	docker compose restart
 ssh-node: 
 	docker compose exec node-server sh
+
+ssh-node-root: 
+	docker compose exec -uroot node-server sh

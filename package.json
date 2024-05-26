@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/switchforce1/node-back1#readme",
   "dependencies": {
-    "http": "^0.0.1-security"
+    "http": "^0.0.1-security",
+    "mongo": "^0.1.0"
   }
 }

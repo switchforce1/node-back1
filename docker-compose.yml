@@ -3,6 +3,8 @@ services:
     user: 1001:1001
     build:
       context: docker/node
+    env_file:
+      - .env
     volumes:
       - .:/app
     ports:
